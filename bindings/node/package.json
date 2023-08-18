@@ -1,0 +1,22 @@
+{
+  "name": "sqlite-dns",
+  "version": "0.1.2",
+  "description": "A sqlite3 extension that allows you to query DNS using SQL",
+  "type": "module",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riyaz-ali/dns.sql.git",
+    "directory": "bindings/node"
+  },
+  "author": {
+    "name": "Riyaz Ali",
+    "email": "me@riyazali.net",
+    "url": "riyazali.net"
+  },
+  "license": "MIT",
+  "files": [
+    "lib/*.dylib",
+    "lib/*.so"
+  ]
+}
