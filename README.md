@@ -12,20 +12,26 @@ SELECT * FROM dns WHERE domain = FQDN('riyazali.net') AND nameserver = SystemRes
 The above query yields a result similar to:
 
 ```
-domain         section  class  type  ttl  nameserver                    data                                                        
+domain         section  class  type  ttl  nameserver                    data
 -------------  -------  -----  ----  ---  --------------------  ------------------------
-riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.110.153"}                      
-
-riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.111.153"}                      
-
-riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.108.153"}                      
-
+riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.110.153"}
+riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.111.153"}
+riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.108.153"}
 riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.109.153"}
 ```
 
 ## Usage
 
-To build as a `sqlite3` shared extension, you can use the `cmd/shared/shared.go` target.
+The [releases page](https://github.com/riyaz-ali/dns.sql/releases) contains pre-built binaries for Linux and MacOS. Alternatively, you can use bindings for one of the following languages.
+
+| Language       |  Install                   |                                                                                                                                        |
+| -------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Python         | `pip install sqlite-dns`   | [![PyPI](https://img.shields.io/pypi/v/sqlite-dns.svg?color=blue&logo=python&logoColor=white)](https://pypi.org/project/sqlite-dns/)
+| Node.js        | `npm install sqlite-dns`   | [![npm](https://img.shields.io/npm/v/sqlite-dns.svg?color=green&logo=nodedotjs&logoColor=white)](https://www.npmjs.com/package/sqlite-dns)
+
+### From source
+
+To build from source, you can use the `cmd/shared/shared.go` target.
 
 ```shell
 > go build -o libdns.so -buildmode=c-shared cmd/shared/shared.go
