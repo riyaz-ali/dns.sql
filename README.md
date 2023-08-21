@@ -22,7 +22,13 @@ riyazali.net.  answer   IN     A     289  udp://192.168.1.1:53  {"A":"185.199.10
 
 ## Usage
 
-The [releases page](https://github.com/riyaz-ali/dns.sql/releases) contains pre-built binaries for Linux and MacOS. Alternatively, you can use bindings for one of the following languages.
+You can download the extension using [`sqlpkg`](https://sqlpkg.org) or download pre-built binaries for Linux and MacOS from the [releases page](https://github.com/riyaz-ali/dns.sql/releases).
+
+```shell
+sqlpkg install riyaz-ali/dns.sql
+```
+
+Alternatively, you can use bindings for one of the following languages.
 
 | Language       |  Install                   |                                                                                                                                        |
 | -------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
