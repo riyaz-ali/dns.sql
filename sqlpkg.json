@@ -1,0 +1,27 @@
+{
+  "owner": "riyaz-ali",
+  "name": "dns.sql",
+  "version": "0.1.2",
+  "repository": "https://github.com/riyaz-ali/dns.sql",
+  "authors": ["Riyaz Ali"],
+  "license": "MIT",
+  "description": "A sqlite3 extension that allows you to query DNS using SQL",
+  "keywords": ["dns"],
+  "symbols": [
+    "dns",
+    "search_list",
+    "FQDN",
+    "ClassicResolver",
+    "TlsResolver",
+    "SystemResolver"
+  ],
+  "assets": {
+    "path": "{repository}/releases/download/v{version}",
+    "files": {
+      "darwin-amd64": "sqlite-dns-darwin-universal.dylib",
+      "darwin-arm64": "sqlite-dns-darwin-universal.dylib",
+      "linux-amd64": "sqlite-dns-linux-x64.so",
+      "linux-arm64": "sqlite-dns-linux-arm64.so"
+    }
+  }
+}
